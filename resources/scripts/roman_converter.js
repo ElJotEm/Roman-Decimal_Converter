@@ -3,8 +3,16 @@
 const roman = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
 const decimal = [1000,900,500,400,100,90,50,40,10,9,5,4,1]
 
-// TODO: converter functions
-function toArabic(inputStr) {}
+function toArabic(inputStr) {
+    var converted = 0;
+    for (var i = 0; i <= decimal.length; i++) {
+        while (inputStr.indexOf(roman[i]) === 0){
+            converted += decimal[i];
+            inputStr = inputStr.replace(roman[i],'');
+        }
+    }
+    return converted;
+}
 
 function toRoman(inputNum) {
     var converted = '';
