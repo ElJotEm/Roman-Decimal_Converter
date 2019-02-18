@@ -1,0 +1,95 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+    background-color: #00274C;
+    color: #fff;
+    margin: 0;
+    padding: 5%;
+    width: 100%;
+}
+
+header > div {
+    margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+    header > div {
+        max-width: 600px;
+    }
+}
+
+h1 {
+    border-bottom: solid 2px #0455CB;
+    text-transform: uppercase;
+}
+
+section {
+    margin: 50px 0;
+}
+
+.converter {
+    align-items: center;
+    background-color: #0455CB;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 600px;
+    padding: 0 10px 25px;
+}
+
+@media screen and (max-width: 620px) {
+    .converter {
+        margin: 0 10px;
+    }
+}
+
+.converter_button {
+    background-color: #fff;
+    border-radius: 3px;
+    border: none;
+    margin: 25px 0 0;
+    min-width: 10px;
+    padding: 0 4%;
+    text-transform: uppercase;
+}
+
+input {
+    font-size: 18pt;
+    height: 30px;
+    margin: 25px 5px 0;
+    max-width: 100%;
+    min-width: 60%;
+}
+
+footer {
+    background-color: #00274C;
+    bottom: 0;
+    color: #fff;
+    margin: 0;
+    padding: 2%;
+    position: absolute;
+    width: 100%;
+}
+
+a, a:visited {
+    color: #2475EB;
+}
+
+a:hover, a:active {
+    color: #31D9FE;
+}

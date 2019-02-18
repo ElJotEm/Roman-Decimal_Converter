@@ -27,20 +27,20 @@ function toRoman(inputNum) {
 
 function convert() {
     var input = document.getElementById('converterValue'),
-        inputValue = input.value.replace(/[,]|[.]/g, '').trim(); //clean up input
+        inputValue = input.value.replace(/[,]|[.]/g, '').trim();
 
-    if(!parseInt(inputValue,10)) { //check if input is a number or string
+    if(inputValue != parseInt(inputValue,10)) {
         for(var i = 0; i < inputValue.length; i++) {
             var char = inputValue.charAt(i).toUpperCase();
-            if(!roman.includes(char)) { //check if input is a valid roman numeral
+            if(!roman.includes(char)) {
                 alert('Roman numerals can only be I, V, X, L, C, D or M');
                 return false;
             }
         }
         input.value = toArabic(inputValue);
-    } else if(inputValue < 4000) {
+    } else if(inputValue < 4000 && inputValue > 0) {
         input.value = toRoman(inputValue);
     } else {
-        alter('Values higher than 3.999 are not supported for the common roman numerals.')
+        alert('Values other than 1 to 3.999 are not supported for the common roman numerals.')
     }
 }
